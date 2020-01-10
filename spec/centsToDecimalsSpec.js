@@ -10,7 +10,7 @@ describe("centsToDecimals function", function () { // Describes the suite / grou
 
   it("Returns undefined when parameter passed is a string containing number characters", function () {
     // ... complete the below test assertion
-    expect(Function_To_Test(parameter)).toEqual(expectedResult);
+    expect(centsToDecimals("3434343")).toEqual(undefined);
   });
 
   it("Returns undefined when NaN value is passed as a parameter", function () {
@@ -19,32 +19,28 @@ describe("centsToDecimals function", function () { // Describes the suite / grou
 
   it("Returns undefined when undefined value is passed as a parameter", function () {
     // ... complete the below test assertion 
-    expect(Function_To_Test(parameter)).toEqual(expectedResult);    
+    expect(centsToDecimals(undefined)).toEqual(undefined);    
   });
 
   it("Returns undefined when parameter is not passed.", function () {
     // ... complete the below test assertion
-    expect(Function_To_Test(parameter)).toEqual(expectedResult);    
+    expect(centsToDecimals()).toEqual(undefined);    
 
   });
 
-  it("Returns undefined when parameter is not passed.", function () {
-    // ... complete the below test assertion
-    expect(Function_To_Test(parameter)).toEqual(expectedResult);    
-  });
 
   it("Should convert a number of cents to a string represenation of a floating point number.", function () {
     // ... complete the below test assertion
-    expect(Function_To_Test(parameter)).toEqual(expectedResult);    
+    expect(centsToDecimals(3.3)).toEqual("3.3");    
   });
 
   it("Should convert a number of cents and return a string represenation of a floating point number.", function () {
     // ... complete the below test assertion
-    expect(Function_To_Test(parameter)).toEqual(expectedResult);    
+    expect(centsToDecimals(3.4)).toEqual("3.4");    
   });
 
   it("Should return a string representation of a number with `$` sign appended at the end.", function () {
     // ... complete the below test assertion
-    expect(Function_To_Test(parameter)).toEqual(expectedResult);    
+    expect(centsToDecimals(3.3)).toEqual("3.3$");    
   });
 });
